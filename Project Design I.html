@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Project Design I</title>
+		 <style type="text/css">
+		 	body {
+		 		background-color: #f5c35f;
+		 	}
+		 	.header {
+		 		font-family: monospace;
+		 		font-size: 17px;
+		 		font-weight: bold;
+		 		padding: 20px 0px;
+		 	}
+		 	.footer {
+		 		padding: 10px 0px;
+		 		background-color: white;
+		 		position: absolute;
+		 		width: 100%;
+		 		bottom: 0;
+		 		left: 0;
+		 	}
+	        .container {
+			  background-color: #eee;
+			  width : 360px;
+			  text-align: center;
+			  height: 640px;
+			  box-shadow: 0px 20px 60px rgba(0,0,0,0.2);
+			  border-radius: 30px;
+			  margin: 0px auto;
+			  overflow: hidden; /*child will be trimmed*/
+			  position: relative;
+			}
+			.container .selection img {
+			  width: 50px;
+			  height: 50px;
+			}
+			.header {
+			  background-color: white;
+			}
+			.selection-con {
+				text-align: center;
+				overflow: hidden;
+				padding: 10px;
+			}
+			.selection {
+			  background-color: white;
+			  width: 46%;
+			  margin: 2%;
+			  border-radius: 10%;
+			  float: left;
+			  font-size: 12px;
+			  font-weight: bold;
+			  transition: bottom 0.3s;
+			  position: relative;
+			  bottom: 0; /*for transition you need to put initial state value ex.bottom 0, since in the transition we use bottom */
+			  box-sizing: border-box; /*include padding inside element*/
+			  padding: 20px 10px;
+			}
+			.gray-text {
+				font-size: 8px;
+				color: gray;
+				font-weight: bold;
+			}
+			.selection p {
+				font-family: monospace;
+			}
+			.selection:hover {
+				background-color: #ffd11a;
+				bottom: 7px;
+    			box-shadow: 0px 20px 20px rgba(0,0,0,0.15);
+			}
+			p {
+				margin: 3px 0px 3px 0px;
+			}
+			.icon {
+				display: inline-block;
+				padding: 0px 20px;
+			}
+			.icon p {
+				font-size: 9px;
+			}
+			.home-icon {
+				background-image: url("https://image.flaticon.com/icons/svg/1372/1372641.svg");
+				background-size: contain;
+				width: 28px;
+				height: 28px;
+			}
+			.location-icon {
+				background-image: url("https://image.flaticon.com/icons/svg/1244/1244579.svg");
+				background-size: contain;
+				width: 25px;
+				height: 25px;
+			}
+			.hammer-icon {
+				background-image: url("https://image.flaticon.com/icons/svg/248/248144.svg");
+				background-size: contain;
+				width: 25px;
+				height: 25px;
+			}
+			.pencil-icon {
+				background-image: url("https://image.flaticon.com/icons/svg/247/247967.svg");
+				background-size: contain;
+				width: 25px;
+				height: 25px;
+			}
+			.trophy-icon {
+				background-image: url("https://image.flaticon.com/icons/svg/263/263056.svg");
+				background-size: contain;
+				width: 25px;
+				height: 25px;
+			}
+	    </style>
+	</head>
+
+	<body>
+		<div class="container">
+		    <div class="header">
+		      Discovery
+		    </div>
+		    <div class="selection-con">
+			    <div class="selection">
+			      <img src="https://image.flaticon.com/icons/svg/817/817401.svg">
+			      <p>
+			        Bars & Hotels
+			      </p>
+			      <p class="gray-text">42 places</p>
+			    </div>
+			    <div class="selection">
+			      <img src="https://image.flaticon.com/icons/svg/135/135694.svg">
+			      <p>
+			        Fine Dining
+			      </p>
+			      <p class="gray-text">22 places</p>
+			    </div>
+			    <div class="selection">
+			      <img src="https://image.flaticon.com/icons/svg/135/135652.svg">
+			      <p>
+			        Cafes
+			      </p>
+			      <p class="gray-text">15 places</p>
+			    </div>
+			    <div class="selection">
+			      <img src="https://image.flaticon.com/icons/svg/135/135702.svg">
+			      <p>
+			        Nearby
+			      </p>
+			      <p class="gray-text">10 places</p>
+			    </div>
+			    <div class="selection">
+			      <img src="https://image.flaticon.com/icons/svg/135/135759.svg">
+			      <p>
+			        Fast Foods
+			      </p>
+			      <p class="gray-text">30 places</p>
+			    </div>
+			    <div class="selection">
+			      <img src="https://image.flaticon.com/icons/svg/135/135717.svg">
+			      <p>
+			        Featured Foods
+			      </p>
+			      <p class="gray-text">15 places</p>
+			    </div>
+			</div>
+			<div class="footer">
+				<div class="icon">
+					<div class="home-icon"></div>
+					<p>Home</p>
+				</div>
+				<div class="icon">
+					<div class="location-icon"></div>
+					<p>Location</p>
+				</div>
+				<div class="icon">
+					<div class="hammer-icon"></div>
+					<p>Setting</p>
+				</div>
+				<div class="icon">
+					<div class="pencil-icon"></div>
+					<p>Learn</p>
+				</div>
+				<div class="icon">
+					<div class="trophy-icon"></div>
+					<p>Trophy</p>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

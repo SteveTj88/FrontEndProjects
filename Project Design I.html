@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Project Design I</title>
 		 <style type="text/css">
 		 	body {
@@ -13,7 +14,6 @@
 		 		padding: 20px 0px;
 		 	}
 		 	.footer {
-		 		padding: 10px 0px;
 		 		background-color: white;
 		 		position: absolute;
 		 		width: 100%;
@@ -21,41 +21,43 @@
 		 		left: 0;
 		 	}
 	        .container {
-			  background-color: #eee;
-			  width : 360px;
-			  text-align: center;
-			  height: 640px;
-			  box-shadow: 0px 20px 60px rgba(0,0,0,0.2);
-			  border-radius: 30px;
-			  margin: 0px auto;
-			  overflow: hidden; /*child will be trimmed*/
-			  position: relative;
+			  	background-color: #eee;
+			  	width : 360px;
+			  	text-align: center;
+			  	height: 640px;
+			  	box-shadow: 0px 20px 60px rgba(0,0,0,0.2);
+			  	border-radius: 30px;
+			  	margin: 0px auto;
+			  	overflow: hidden; /*child will be trimmed*/
+			  	position: relative;
 			}
 			.container .selection img {
-			  width: 50px;
-			  height: 50px;
+			  	width: 50px;
+			  	height: 50px;
 			}
 			.header {
-			  background-color: white;
+			  	background-color: white;
 			}
 			.selection-con {
 				text-align: center;
 				overflow: hidden;
 				padding: 10px;
+				overflow: auto;
+				height: 500px;
 			}
 			.selection {
-			  background-color: white;
-			  width: 46%;
-			  margin: 2%;
-			  border-radius: 10%;
-			  float: left;
-			  font-size: 12px;
-			  font-weight: bold;
-			  transition: bottom 0.3s;
-			  position: relative;
-			  bottom: 0; /*for transition you need to put initial state value ex.bottom 0, since in the transition we use bottom */
-			  box-sizing: border-box; /*include padding inside element*/
-			  padding: 20px 10px;
+			  	background-color: white;
+			  	width: 46%;
+			  	margin: 2%;
+			  	border-radius: 10%;
+			  	float: left;
+			  	font-size: 12px;
+			  	font-weight: bold;
+			  	transition: bottom 0.3s;
+			  	position: relative;
+			  	bottom: 0; /*for transition you need to put initial state value ex.bottom 0, since in the transition we use bottom */
+			  	box-sizing: border-box; /*include padding inside element*/
+			  	padding: 20px 10px;
 			}
 			.gray-text {
 				font-size: 8px;
@@ -75,40 +77,76 @@
 			}
 			.icon {
 				display: inline-block;
-				padding: 0px 20px;
-			}
-			.icon p {
-				font-size: 9px;
+				padding: 0px 14px;
+				text-align: center;
+				text-decoration: none;
+				color: black;
 			}
 			.home-icon {
-				background-image: url("https://image.flaticon.com/icons/svg/1372/1372641.svg");
+				background-image: url("images/home.svg");
 				background-size: contain;
 				width: 28px;
 				height: 28px;
+				display: block;
+			}
+			.icon:hover .home-icon {
+				background-image: url("images/home-hover.svg");
+			}
+			.icon:hover .icon-text {
+				color: orange;
 			}
 			.location-icon {
-				background-image: url("https://image.flaticon.com/icons/svg/1244/1244579.svg");
+				background-image: url("images/location.svg");
 				background-size: contain;
 				width: 25px;
 				height: 25px;
+				display: block;
+			}
+			.icon:hover .location-icon {
+				background-image: url("images/location-hover.svg");
 			}
 			.hammer-icon {
-				background-image: url("https://image.flaticon.com/icons/svg/248/248144.svg");
+				background-image: url("images/hammer.svg");
 				background-size: contain;
 				width: 25px;
 				height: 25px;
+				display: block;
+			}
+			.icon:hover .hammer-icon {
+				background-image: url("images/hammer-hover.svg");
 			}
 			.pencil-icon {
-				background-image: url("https://image.flaticon.com/icons/svg/247/247967.svg");
+				background-image: url("images/pencil.svg");
 				background-size: contain;
 				width: 25px;
 				height: 25px;
+				display: block;
+			}
+			.icon:hover .pencil-icon {
+				background-image: url("images/pencil-hover.svg");
 			}
 			.trophy-icon {
-				background-image: url("https://image.flaticon.com/icons/svg/263/263056.svg");
+				background-image: url("images/trophy.svg");
 				background-size: contain;
 				width: 25px;
 				height: 25px;
+				display: block;
+			}
+			.icon:hover .trophy-icon {
+				background-image: url("images/trophy-hover.svg");
+			}
+			.icon-text {
+				font-size: 9px;
+				font-family: monospace;
+			}
+			.icon-img {
+				margin: auto; /*to set even left and right margin on display block*/
+			}
+			.navigation-bar {
+				padding: 0px;
+			}
+			ul.navigation-bar li{
+				display: inline-block;
 			}
 	    </style>
 	</head>
@@ -120,70 +158,98 @@
 		    </div>
 		    <div class="selection-con">
 			    <div class="selection">
-			      <img src="https://image.flaticon.com/icons/svg/817/817401.svg">
+			      <img src="images/cake.svg">
 			      <p>
 			        Bars & Hotels
 			      </p>
 			      <p class="gray-text">42 places</p>
 			    </div>
 			    <div class="selection">
-			      <img src="https://image.flaticon.com/icons/svg/135/135694.svg">
+			      <img src="images/brocoli.svg">
 			      <p>
 			        Fine Dining
 			      </p>
 			      <p class="gray-text">22 places</p>
 			    </div>
 			    <div class="selection">
-			      <img src="https://image.flaticon.com/icons/svg/135/135652.svg">
+			      <img src="images/cheese.svg">
 			      <p>
 			        Cafes
 			      </p>
 			      <p class="gray-text">15 places</p>
 			    </div>
 			    <div class="selection">
-			      <img src="https://image.flaticon.com/icons/svg/135/135702.svg">
+			      <img src="images/tomato.svg">
 			      <p>
 			        Nearby
 			      </p>
 			      <p class="gray-text">10 places</p>
 			    </div>
 			    <div class="selection">
-			      <img src="https://image.flaticon.com/icons/svg/135/135759.svg">
+			      <img src="images/beers.svg">
 			      <p>
 			        Fast Foods
 			      </p>
 			      <p class="gray-text">30 places</p>
 			    </div>
 			    <div class="selection">
-			      <img src="https://image.flaticon.com/icons/svg/135/135717.svg">
+			      <img src="images/strawberry.svg">
 			      <p>
 			        Featured Foods
 			      </p>
 			      <p class="gray-text">15 places</p>
 			    </div>
+			    <div class="selection">
+			      <img src="images/banana.svg">
+			      <p>
+			        Banana Cafe
+			      </p>
+			      <p class="gray-text">7 places</p>
+			    </div>
+			    <div class="selection">
+			      <img src="images/pokeball.svg">
+			      <p>
+			      	Poke Bar
+			      </p>
+			      <p class="gray-text">18 places</p>
+			    </div>
 			</div>
-			<div class="footer">
-				<div class="icon">
-					<div class="home-icon"></div>
-					<p>Home</p>
-				</div>
-				<div class="icon">
-					<div class="location-icon"></div>
-					<p>Location</p>
-				</div>
-				<div class="icon">
-					<div class="hammer-icon"></div>
-					<p>Setting</p>
-				</div>
-				<div class="icon">
-					<div class="pencil-icon"></div>
-					<p>Learn</p>
-				</div>
-				<div class="icon">
-					<div class="trophy-icon"></div>
-					<p>Trophy</p>
-				</div>
-			</div>
+			<nav class="footer">
+				<ul class="navigation-bar">
+					<li>
+				<!-- best practice -> dont nest 'by default block' element (div) into inline parent ex. <a href="#"> <div>test</div> </a> (this is a big no no) -->
+				<!-- if u want the element to be block set it on css like the example below (setting span element which is by default an inline display type into block display from css)  -->
+						<a href="#" class="icon">
+							<span class="icon-img home-icon"></span>
+							<span class="icon-text">Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="icon">
+							<span class="icon-img location-icon"></span>
+							<span class="icon-text">Location</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="icon">
+							<span class="icon-img hammer-icon"></span>
+							<span class="icon-text">Setting</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="icon">
+							<span class="icon-img pencil-icon"></span>
+							<span class="icon-text">Learn</span>
+						</a>
+					</li>
+					<li>
+						<a class="icon">
+							<span class="icon-img trophy-icon"></span>
+							<span class="icon-text">Trophy</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
 		</div>
 
 	</body>

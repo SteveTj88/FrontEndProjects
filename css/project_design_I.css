@@ -1,0 +1,183 @@
+body {
+	background-color: #f5c35f;
+}
+
+.header {
+	font-family: monospace;
+	font-size: 17px;
+	font-weight: bold;
+	padding: 20px 0px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.footer {
+	background-color: white;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+.container {
+	background-color: #eee;
+	width: 360px;
+	text-align: center;
+	height: 640px;
+	box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.2);
+	border-radius: 30px;
+	margin: 0px auto;
+	overflow: hidden; /*child will be trimmed*/
+	position: relative;
+	padding: 60px 0px 80px 0px; /*60px is the space reserved for header element (height of the header) & 80px is the space reserved for footer element(height of footer)*/
+	box-sizing: border-box;
+}
+
+.container .selection img {
+	width: 50px;
+	height: 50px;
+}
+
+.header {
+	background-color: white;
+}
+
+.selection-con {
+	text-align: center;
+	overflow: hidden;
+	padding: 10px;
+	overflow: auto;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.selection {
+	background-color: white;
+	width: 46%;
+	margin: 2%;
+	border-radius: 10px;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	transition: bottom 0.3s;
+	position: relative;
+	bottom: 0; /*for transition you need to put initial state value ex.bottom 0, since in the transition we use bottom */
+	box-sizing: border-box; /*include padding inside element*/
+	padding: 20px 10px;
+	text-decoration: none;
+	font-family: monospace;
+}
+
+.gray-text {
+	font-size: 8px;
+	color: gray;
+	font-weight: bold;
+	display: block;
+}
+
+.selection-info {
+	display: block;
+	color: black;
+}
+
+.selection:hover {
+	background-color: #ffd11a;
+	bottom: 7px;
+	box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+	display: inline-block;
+	padding: 0px 14px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+
+.home-icon {
+	background-image: url("../images/home.svg");
+	background-size: contain;
+	width: 28px;
+	height: 28px;
+	display: block;
+}
+
+.icon:hover .home-icon {
+	background-image: url("../images/home-hover.svg");
+}
+
+.icon:hover .icon-text {
+	color: orange;
+}
+
+.location-icon {
+	background-image: url("../images/location.svg");
+	background-size: contain;
+	width: 25px;
+	height: 25px;
+	display: block;
+}
+
+.icon:hover .location-icon {
+	background-image: url("../images/location-hover.svg");
+}
+
+.hammer-icon {
+	background-image: url("../images/hammer.svg");
+	background-size: contain;
+	width: 25px;
+	height: 25px;
+	display: block;
+}
+
+.icon:hover .hammer-icon {
+	background-image: url("../images/hammer-hover.svg");
+}
+
+.pencil-icon {
+	background-image: url("../images/pencil.svg");
+	background-size: contain;
+	width: 25px;
+	height: 25px;
+	display: block;
+}
+
+.icon:hover .pencil-icon {
+	background-image: url("../images/pencil-hover.svg");
+}
+
+.trophy-icon {
+	background-image: url("../images/trophy.svg");
+	background-size: contain;
+	width: 25px;
+	height: 25px;
+	display: block;
+}
+
+.icon:hover .trophy-icon {
+	background-image: url("../images/trophy-hover.svg");
+}
+
+.icon-text {
+	font-size: 9px;
+	font-family: monospace;
+}
+
+.icon-img {
+	margin: auto; /*to set even left and right margin on display block*/
+}
+
+.navigation-bar {
+	padding: 0px;
+}
+
+ul.navigation-bar li {
+	display: inline-block;
+}
+
+/* 
+	Project Detail 
+*/
+

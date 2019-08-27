@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Project Design I</title>
+		<link href="css/project_design_I.css" rel="stylesheet"> 	
+		<style>
+			.container-detail {
+				background-color: #eee;
+				width: 360px;
+				text-align: center;
+				height: 640px;
+				box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.2);
+				border-radius: 30px;
+				margin: 0px auto;
+				overflow: hidden; /*child will be trimmed*/
+				position: relative;
+				padding: 60px 0px 80px 0px; /*60px is the space reserved for header element (height of the header) & 80px is the space reserved for footer element(height of footer)*/
+				box-sizing: border-box;
+			}
+			.content {
+				height: 100%;
+				overflow-x: hidden; /*happens becoz of margin-right: -4px;*/
+				overflow-y: auto;
+			}
+			.content-item {
+				margin: 10px auto;
+				background-color: white;
+				font-family: monospace;
+				font-size: 8px;
+				padding: 10px;
+			}
+			.content-item-image,
+			.content-info,
+			.content-info-detail {
+				display: inline-block;
+				vertical-align: top;
+				margin-right: -4px; /*always add this if u use display: inline-block;*/
+			}
+			.content-item-image {
+				width: 40%;
+				height: 90px;
+			}
+			.content-item-image img {
+				border-radius: 5px;
+				width: 100px;
+				height: 90px;
+			}
+			.content-info {
+				width: 40%;
+				text-align: left;
+				/*padding: 0px 10px 0px 10px;*/
+				box-sizing: border-box;
+				vertical-align: top;
+				display: inline-block;
+			}
+			.content-info h3 {
+				color: gray;
+			}
+			.content-info-detail {
+				width: 20%;
+				text-align: center;
+			}
+			.content-info-detail span {
+				border: 1px solid white;
+				background-color: orange;
+				width: 50%;
+				height: 16px;
+				margin: auto;
+				display: block;
+				font-size: 10px;
+				color: white;
+				border-radius: 3px;
+			}
+			.content-info-detail span p {
+				margin-top: 3px;
+			}
+			.content-info-detail img {
+				width: 15px;
+				margin-left: 10px;
+			}
+			.bookmark-icon {
+				width: 30px;
+				height: 30px;
+				padding-top: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container-detail">
+		    <div class="header">
+		     	<span>Discovery</span>	
+		    </div>
+		    <div class="content">
+		    	<div class="content-item">
+		    		<div class="content-item-image">
+		    			<img src="/images/padthai.jpg">
+		    		</div>
+		    		<div class="content-info">
+		    			<h3>11:30AM to 11PM<h3>
+		    			<h1>Good Thai</h1>
+		    			<h3>20 Queen Street, NSW</h3>
+		    			<h3>Asia, Thai</h3>
+		    		</div>
+		    		<div class="content-info-detail">
+		    			<span>
+		    				<p>5.8</p>
+		    			</span>
+		    			<img class="bookmark-icon" src="/images/bookmark.svg">
+		    		</div>
+		    	</div>
+		    	<div class="content-item">
+		    		<div class="content-item-image">
+		    			<img src="/images/pudding.jpg">
+		    		</div>
+		    		<div class="content-info">
+		    			<h3>11:30AM to 11PM<h3>
+		    			<h1>Pudding</h1>
+		    			<h3>123 Dessert Street, NSW</h3>
+		    			<h3>Asia, Western</h3>
+		    		</div>
+		    		<div class="content-info-detail">
+		    			<span>
+		    				<p>5.9</p>
+		    			</span>
+		    			<img class="bookmark-icon" src="/images/bookmark.svg">
+		    		</div>
+		    	</div>
+		    	<div class="content-item">
+		    		<div class="content-item-image">
+		    			<img src="/images/nasi_padang.jpg">
+		    		</div>
+		    		<div class="content-info">
+		    			<h3>10:30AM to 9PM<h3>
+		    			<h1>Nasi Padang</h1>
+		    			<h3>8 Indon Street, NSW</h3>
+		    			<h3>Asia, Indonesian</h3>
+		    		</div>
+		    		<div class="content-info-detail">
+		    			<span>
+		    				<p>6</p>
+		    			</span>
+		    			<img class="bookmark-icon" src="/images/bookmark.svg">
+		    		</div>
+		    	</div>
+		    	<div class="content-item">
+		    		<div class="content-item-image">
+		    			<img src="/images/charkueytiao.jpg">
+		    		</div>
+		    		<div class="content-info">
+		    			<h3>07:30AM to 6PM<h3>
+		    			<h1>Char Kuey Tiao Thai</h1>
+		    			<h3>7 China Street, NSW</h3>
+		    			<h3>Asia, Chinese</h3>
+		    		</div>
+		    		<div class="content-info-detail">
+		    			<span>
+		    				<p>6.2</p>
+		    			</span>
+		    			<img class="bookmark-icon" src="/images/bookmark.svg">
+		    		</div>
+		    	</div>
+		    	<div class="content-item">
+		    		<div class="content-item-image">
+		    			<img src="/images/friedrice.jpg">
+		    		</div>
+		    		<div class="content-info">
+		    			<h3>08:30AM to 10PM<h3>
+		    			<h1>Fried Rice</h1>
+		    			<h3>10 Amazing Street, NSW</h3>
+		    			<h3>Asia, Malay</h3>
+		    		</div>
+		    		<div class="content-info-detail">
+		    			<span>
+		    				<p>6.3</p>
+		    			</span>
+		    			<img class="bookmark-icon" src="/images/bookmark.svg">
+		    		</div>
+		    	</div>
+		    </div>	
+
+			<nav class="footer">
+				<ul class="navigation-bar">
+					<li>
+				<!-- best practice -> dont nest 'by default block' element (div) into inline parent ex. <a href="#"> <div>test</div> </a> (this is a big no no) -->
+				<!-- if u want the element to be block set it on css like the example below (setting span element which is by default an inline display type into block display from css)  -->
+						<a href="#" class="icon">
+							<span class="icon-img home-icon"></span>
+							<span class="icon-text">Home</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="icon">
+							<span class="icon-img location-icon"></span>
+							<span class="icon-text">Location</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="icon">
+							<span class="icon-img hammer-icon"></span>
+							<span class="icon-text">Setting</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="icon">
+							<span class="icon-img pencil-icon"></span>
+							<span class="icon-text">Learn</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="icon">
+							<span class="icon-img trophy-icon"></span>
+							<span class="icon-text">Trophy</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+	</body>
+</html>

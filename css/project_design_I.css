@@ -55,7 +55,7 @@ body {
 .selection {
 	background-color: white;
 	width: 46%;
-	margin: 2%;
+	margin: 2%;/
 	border-radius: 10px;
 	float: left;
 	font-size: 12px;
@@ -179,4 +179,106 @@ ul.navigation-bar li {
 /* 
 	Project Detail 
 */
+.container-detail {
+    background-color: #eee;
+    width: 360px;
+    text-align: center;
+    height: 640px;
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin: 0px auto;
+    overflow: hidden; /*child will be trimmed*/
+    position: relative;
+    padding: 60px 0px 80px 0px; /*60px is the space reserved for header element (height of the header) & 80px is the space reserved for footer element(height of footer)*/
+    box-sizing: border-box;
+}
+.content {
+    height: 100%;
+    overflow-x: hidden; /*happens becoz of margin-right: -4px;*/
+    overflow-y: auto;
+}
+.content-item {
+    margin: 10px auto;
+    background-color: white;
+    font-family: monospace;
+    font-size: 8px;
+    padding: 10px;
+}
+.content-item-image,
+.content-info,
+.content-info-detail {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px; /*always add this if u use display: inline-block;*/
+}
+.content-item-image {
+    width: 40%;
+    height: 90px;
+}
+.content-item-image img {
+    border-radius: 5px;
+    width: 100px;
+    height: 90px;
+}
+.content-info {
+    width: 40%;
+    text-align: left;
+    /*padding: 0px 10px 0px 10px;*/
+    box-sizing: border-box;
+    vertical-align: top;
+    display: inline-block;
+    height: 90px
+}
+.content-info h3 {
+    color: gray;
+}
+.content-info-detail {
+    width: 20%;
+    text-align: center;
+}
+.content-info-detail span {
+    border: 1px solid white;
+    background-color: orange;
+    width: 50%;
+    height: 16px;
+    margin: auto;
+    display: block;
+    font-size: 10px;
+    color: white;
+    border-radius: 3px;
+}
+.content-info-detail span p {
+    margin-top: 3px;
+}
+.content-info-detail img {
+    width: 15px;
+    margin-left: 10px;
+}
+.bookmark-icon {
+    width: 30px;
+    height: 30px;
+    padding-top: 50px;
+}
 
+
+.content-info-opening-hours {
+    margin: 0px;
+}
+
+.content-info-food-origin {
+    margin-top: 18px
+}
+
+.content-info-food-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* This is to cut long text */
+    width: 100%;
+}
+
+.content-info-food-address {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: rgb(245, 245, 245);
+            font-family: sans-serif;
+        }
+
+        .container {
+            max-width: 100%;
+            box-sizing: border-box;
+            padding: 80px 0px 60px 0px;
+            text-align: center;
+            margin: 0px auto;
+            position: relative;
+            border-radius: 30px;
+        }
+        
+        .navigation-bar {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .header {
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        
+        .footer {
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        .menu-nav-container {
+            display: inline-block;
+            padding: 10px 30px 10px 30px;
+        }
+
+        .menu-nav {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+
+        .biodata-container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .biodata-image {
+            width: 30%;
+            height: 30%
+            background-size: cover;
+            background-color: greenyellow;
+            border-radius: 50%;
+        }
+        
+        .services-name {
+            display: block;
+        }
+        
+        .image-container {
+            padding-top: 30px;
+        }
+        
+        .about-me-container {
+            text-align: center;
+        }
+        
+        .about-me-content {
+            margin: 0px auto;
+            text-align: left
+        }
+        
+        .about-me-content td {
+            padding-right: 50px
+        }
+        
+        .services-container {
+            position: relative;
+        }
+        
+        .services-box {
+            width: 20%;
+            display: inline-block;
+        }
+        
+        .footer p {
+            color: blanchedalmond;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="header">
+            <ul class="navigation-bar">
+                <li class="menu-nav-container" id="aboutMe">
+                    <a href="#" class="menu-nav">
+                        <span>About Me</span>
+                    </a>
+                </li>
+                <li class="menu-nav-container" id="portfolio">
+                    <a href="#" class="menu-nav">
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li class="menu-nav-container" id="contactMe">
+                    <a href="#" class="menu-nav">
+                        <span>Contact Me</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="biodata-container">
+                <div class="image-container">
+                    <img class="biodata-image" src="https://img.pngio.com/download-svg-download-png-panda-png-1024_1024.png" alt="panda picture"/>
+                    <span class="biodata-name">
+                        <p>John Doe</p>
+                    </span>
+                </div>
+                
+                <div class="about-me-container">
+                    <span class="about-me-title">
+                        <h3>About Me</h3>
+                    </span>
+                    <table class="about-me-content">
+                        <tr>
+                            <td><h3>Name</h3></td>
+                            <td>John Doe</td>
+                        </tr>
+                        <tr>
+                            <td><h3>Age</h3></td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td><h3>Location</h3></td>
+                            <td>Los Angeles</td>
+                        </tr>
+                        <tr>
+                            <td><h3>Experience</h3></td>
+                            <td>FullStack Developer</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                
+                <div class="services-container">
+                    <span class="services-title">
+                        <h3>Services</h3>
+                    </span>
+                    <div class="services-box-container">
+                        <div class="services-box">
+                            <img class="biodata-image" src="https://img.pngio.com/download-svg-download-png-panda-png-1024_1024.png">
+                            <span class="services-name">
+                                Web Design
+                            </span>
+                        </div>
+                        <div class="services-box">
+                            <img class="biodata-image" src="https://img.pngio.com/download-svg-download-png-panda-png-1024_1024.png">
+                            <span class="services-name">
+                                Front End
+                            </span>
+                        </div>
+                        <div class="services-box">
+                            <img class="biodata-image" src="https://img.pngio.com/download-svg-download-png-panda-png-1024_1024.png">
+                            <span class="services-name">
+                                Back End
+                            </span>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+            
+        <div class="footer">
+            <span>
+                <p>© Copyright 2019 Steve. All right reserved.</p>
+            </span>
+        </div>
+        
+    </div>
+    
+    <script>
+        var aboutMe = document.querySelector('#aboutMe span');
+        aboutMe.addEventListener("mouseover", function(element) {   
+            element.target.style.color = "blue";           
+        });
+        aboutMe.addEventListener("mouseout", function(element) {   
+            element.target.style.color = "black";           
+        });
+        
+        var portfolio = document.querySelector('#portfolio span');
+        portfolio.addEventListener("mouseover", function(element) {   
+            element.target.style.color = "blue";           
+        });
+        portfolio.addEventListener("mouseout", function(element) {   
+            element.target.style.color = "black";           
+        });
+        
+        var contactMe = document.querySelector('#contactMe span');
+        contactMe.addEventListener("mouseover", function(element) {   
+            element.target.style.color = "blue";           
+        });
+        contactMe.addEventListener("mouseout", function(element) {   
+            element.target.style.color = "black";           
+        });
+        
+    </script>
+</body>
+</html>

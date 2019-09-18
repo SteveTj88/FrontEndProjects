@@ -2,8 +2,8 @@
 <html>
 <head>
 <style>
-	.parent-box {
-    	width: 400px;
+    .parent-box {
+        width: 400px;
         height: 400px;
         background: grey;
         margin-bottom: 20px;
@@ -11,82 +11,86 @@
     }
     
     .child-box {
-    	width: 100px;
+        width: 100px;
         height: 100px;
         background: lightgreen;
     }
     
     .block {
-    	display: block;
+        display: block;
     }
     
     .inline-block {
-    	display: inline-block;
+        display: inline-block;
      
     }
     
     .table {
-    	display: table;
+        display: table;
     }
     
     .inline-table {
-    	display: inline-table;
+        display: inline-table;
     }
     
     .flex {
-    	display: flex;
+        display: flex;
     }
     
     .f-left {
-    	float: left;
+        float: left;
     }
     
     .f-right {
-    	float: right;
+        float: right;
     }
     
     .ans1 .child-box {
-    	margin:150px;
+        margin:150px;
     }
     
     .ans2 .child-box {
-    	margin: 150px;
+        margin: 150px;
     }
     
     .ans3 .child-box {
-    	margin: 150px;
+        margin: 150px;
     }
     
     .ans4 .child-box {
-		margin: 150px
+        margin: 150px
     }
    
-   	.ans5 {
-    	justify-content: center;
+    .ans5 {
+        justify-content: center;
         align-items: center;
     }
     
     .ans6 {
-    	position: relative;
+        position: relative;
     }
     .ans6 .child-box {
-    	float: none;
+        float: none;
         position: absolute;
         top: 50%;
         left: 50%;
         margin-top: -50px; /* formula = (-1/2 * element's height)*/
         margin-left: -50px; /* formula = (-1/2 * element's width)*/
         /* https://css-tricks.com/centering-percentage-widthheight-elements/ */
-   	}
+    }
     
     .ans7 {
-    	position: relative;
+        position: relative;
     }
     .ans7 .child-box {
-    	float: none;
-		position: absolute;
+        float: none;
+        position: absolute;
         top: 50%;
         left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
     }
     
@@ -96,31 +100,31 @@
 <body>
 
 <div class="parent-box ans1">
-	<div class="child-box block"></div>
+    <div class="child-box block"></div>
 </div>
 
 <div class="parent-box ans2">
-	<div class="child-box inline-block"></div>
+    <div class="child-box inline-block"></div>
 </div>
 
 <div class="parent-box ans3">
-	<div class="child-box table"></div>
+    <div class="child-box table"></div>
 </div>
 
 <div class="parent-box ans4">
-	<div class="child-box inline-table"></div>
+    <div class="child-box inline-table"></div>
 </div>
 
 <div class="parent-box flex ans5">
-	<div class="child-box"></div>
+    <div class="child-box"></div>
 </div>
 
 <div class="parent-box ans6">
-	<div class="child-box f-left"></div>
+    <div class="child-box f-left"></div>
 </div>
 
 <div class="parent-box ans7">
-	<div class="child-box f-right"></div>
+    <div class="child-box f-right"></div>
 </div>
 
 </body>

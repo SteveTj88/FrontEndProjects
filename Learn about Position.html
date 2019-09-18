@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	.parent-box {
+    	width: 400px;
+        height: 100px;
+        background: grey;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    
+    .child-box {
+    	width: 100px;
+        height: 100px;
+        background: lightgreen;
+    }
+    
+    .block {
+    	display: block;
+    }
+    
+    .inline-block {
+    	display: inline-block;
+     
+    }
+    
+    .table {
+    	display: table;
+    }
+    
+    .inline-table {
+    	display: inline-table;
+    }
+    
+    .flex {
+    	display: flex;
+    }
+    
+    .f-left {
+    	float: left;
+    }
+    
+    .f-right {
+    	float: right;
+    }
+    
+    .ans1 .child-box {
+    	margin: 0 auto;
+    }
+    
+    .ans2 {
+    	text-align: center;
+    }
+    
+    .ans3 .child-box {
+    	margin: 0 auto;
+    }
+    
+    .ans4 {
+		text-align: center;
+    }
+   
+   	.ans5 {
+    	justify-content: center;
+    }
+    
+    .ans6 .child-box {
+    	float: none;
+        margin: 0 auto;
+   	}
+    
+    .ans7 .child-box {
+    	float: none;
+        margin: 0 auto;
+    }
+    
+    
+</style>
+</head>
+<body>
+
+<div class="parent-box ans1">
+	<div class="child-box block"></div>
+</div>
+
+<div class="parent-box ans2">
+	<div class="child-box inline-block"></div>
+</div>
+
+<div class="parent-box ans3">
+	<div class="child-box table"></div>
+</div>
+
+<div class="parent-box ans4">
+	<div class="child-box inline-table"></div>
+</div>
+
+<div class="parent-box flex ans5">
+	<div class="child-box"></div>
+</div>
+
+<div class="parent-box ans6">
+	<div class="child-box f-left"></div>
+</div>
+
+<div class="parent-box ans7">
+	<div class="child-box f-right"></div>
+</div>
+
+</body>
+</html>
